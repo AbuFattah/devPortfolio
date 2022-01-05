@@ -38,6 +38,10 @@ ul li a {
   color: #fff;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 header {
   font-family: "Raleway", sans-serif;
   position: relative;
@@ -61,7 +65,8 @@ header::after {
 nav {
   position: sticky;
   top: 0;
-  background: rgba(143, 143, 143, 0.411);
+  /* background: rgba(143, 143, 143, 0.411); */
+  z-index: 1;
 }
 
 nav .nav-container {
@@ -84,8 +89,30 @@ nav .nav-container img {
   width: 80px;
 }
 
-ul li {
+/* ul li {
   margin: 1rem;
+} */
+
+ul li a {
+  position: relative;
+  padding: 1rem;
+}
+ul li a::after {
+  position: absolute;
+  content: "";
+  bottom: 10px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: rgba(93, 255, 242, 0.705);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 200ms ease-in-out;
+}
+
+ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .showcase {
@@ -140,14 +167,15 @@ ul li {
 .about-container .p-heading {
   display: inline-block;
   position: relative;
+  padding: 2rem;
 }
 
 .about-container .p-heading::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  bottom: 30px;
+  left: 30px;
+  width: 82%;
   height: 2px;
   background: rgb(47, 161, 142);
   transform: scaleX(0);
