@@ -42,6 +42,7 @@ header {
   font-family: "Raleway", sans-serif;
   position: relative;
   background: url("../images/background.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
   height: 80vh;
   z-index: 1;
 }
@@ -58,7 +59,9 @@ header::after {
 }
 
 nav {
-  background: rgba(143, 143, 143, 0.144);
+  position: sticky;
+  top: 0;
+  background: rgba(143, 143, 143, 0.411);
 }
 
 nav .nav-container {
@@ -93,10 +96,10 @@ ul li {
   margin: 0 auto;
   height: 90%;
 }
+
 .showcase .showcase-content {
   color: #fff;
-  display: inline-block;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   text-align: center;
   font-size: 1.3rem;
 }
@@ -111,7 +114,7 @@ ul li {
 
 .showcase-content .down-arrow {
   position: absolute;
-  top: 80%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
