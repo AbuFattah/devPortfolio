@@ -370,3 +370,19 @@ ul li a:hover::after {
   background-color: #14504bf3;
   color: #fff;
 }
+
+@media (max-width: 821px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 590px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .card {
+    width: 300px;
+  }
+}
