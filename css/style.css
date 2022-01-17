@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .my-1 {
   margin: 1.5rem 0;
 }
@@ -25,8 +29,15 @@
 .mb-1 {
   margin-bottom: 2rem;
 }
+.txt-center {
+  text-align: center;
+}
 body {
-  background: #f4f4f4;
+  /* background: #f4f4f4; */
+  font-family: "Raleway", sans-serif;
+}
+a {
+  text-decoration: none;
 }
 
 h1.description {
@@ -59,7 +70,7 @@ header::after {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: rgba(44, 45, 49, 0.767);
+  background: rgba(0, 0, 0, 0.562);
 }
 
 nav {
@@ -135,7 +146,14 @@ ul li a:hover::after {
   color: rgba(93, 255, 242, 0.705);
   text-align: start;
 }
-.showcase-content .profession {
+
+.showcase .name {
+  font-size: 60px;
+  letter-spacing: 8px;
+  font-weight: 100;
+}
+
+.showcase-content .passion {
   opacity: 0.6;
 }
 
@@ -164,10 +182,11 @@ ul li a:hover::after {
   margin: 0 auto;
   text-align: center;
 }
-.about-container .p-heading {
-  display: inline-block;
+.section-title {
   position: relative;
-  padding: 2rem;
+  font-family: "Raleway";
+  font-weight: 300;
+  margin: 20px 0;
 }
 
 .about-container .p-heading::after {
@@ -201,4 +220,71 @@ ul li a:hover::after {
 
 .profile-pic:hover img {
   transform: scale(1.3);
+}
+
+.about-description {
+  text-align: justify;
+}
+
+#about .bracu {
+  color: #19596d;
+  font-weight: bold;
+}
+
+/*------------------- 
+  Experience Section 
+---------------------*/
+.hr {
+  height: 1px;
+  width: 25%;
+  margin: 50px auto;
+  background-image: linear-gradient(90deg, white, #7ebd7e, white);
+  border: none;
+}
+#experience {
+  text-align: center;
+}
+.content-container {
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.tech-title {
+  font-weight: 100;
+}
+
+.tech-img-container {
+  position: relative;
+  display: flex;
+  /* background-color: #f4f4f4; */
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tech-img-container::before/* ,
+.tech-img-container::after */ {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(90deg, white, #ddd, white);
+}
+
+.tech-img-container::after {
+  bottom: 0;
+}
+
+.tech-img {
+  width: 100px;
+  filter: opacity(0.6);
+  transition: filter 0.4s ease;
+}
+
+.tech-img:hover {
+  filter: opacity(1);
 }
