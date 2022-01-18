@@ -296,12 +296,24 @@ ul li a:hover::after {
 }
 
 /*------------------- 
-  Works Section
+  CV Section
 ---------------------*/
 
-#work-section {
-  /* background-color: #f4f4f4; */
+.cv {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  height: 150px;
 }
+.btn-download {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  align-self: center;
+}
+
+/*------------------- 
+  Works Section
+---------------------*/
 
 .card-container {
   display: grid;
@@ -314,9 +326,11 @@ ul li a:hover::after {
   position: relative;
   /* width: 292px; */
   overflow: hidden;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
-.card::before {
+.card::after {
   position: absolute;
   content: "";
   top: 0;
@@ -327,14 +341,14 @@ ul li a:hover::after {
   /* background-color: #14504bf3; */
 }
 
-.card:hover::before {
+.card:hover::after {
   background-color: #14504bd0;
 }
 
 .card img {
   width: 100%;
   height: 100%;
-  border: 1px solid #a6a7a6d0;
+  transition: 0.3s ease;
 }
 
 .btn-grp {
@@ -346,11 +360,15 @@ ul li a:hover::after {
   display: flex;
   justify-content: center;
   transition: 0.4s ease;
+  z-index: 10;
 }
 
 .card:hover .btn-grp {
   top: 50%;
-  transform: translate(-50%, 0);
+  /* transform: translate(-50%, 0); */
+}
+.card:hover img {
+  transform: scale(1.1);
 }
 
 .btn {
